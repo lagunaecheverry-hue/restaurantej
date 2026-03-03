@@ -40,7 +40,7 @@
       <form action=""method="">
        <div class="mb-3">
          <label for="nombre" class="form-label">Nombre:</label>
-         <input type="text" id="nombre" class="form-control">
+         <input type="text" id="nombre" class="form-control" name="nombre">
        </div>
        <div class="mb-3">
          <label for="correo" class="form-label">Correo:</label>
@@ -51,13 +51,12 @@
          <textarea name="" id="mensaje" class="form-control" row="4" ></textarea>
        </div>
        <div class="d-grid gap-2">
-       <button class="btn btn-success">Enviar</button>
+       <button type="button" class="btn btn-success" onclick="contactar()">Enviar</button>
        <input type="reset" value="limpiar" class="btn btn-danger">
        </div>
       </form>
     </div>
  
-   
 <footer class="mt-5 text-center">
   <!--Aquí su codigo-->
   <div class="mt-3 text-black text-bg-warning p-3">
@@ -67,9 +66,12 @@
        <a href="https://twitter.com" class="iconos "><img src="images/gorjeo (1).png" alt="twitter" class="rounded"></a>
     <p class="mt-2">&copy; 2026 Sabores del Campo- Desarrollado por <a target="_blank">Juan David Laguna Echeverry</a></p>
   </div>
-</footer>
+</footer> 
 
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/contacto.js"></script>
+
   </body>
 </html>

@@ -40,12 +40,12 @@
 
        <div class="mb-3">
         <label for="nombre" class="form-label"> Nombre completo</label>
-        <input type="text" id="nombre" class="form-control">
+        <input type="text" id="fecha" class="form-control">
        </div>
 
        <div class="mb-3">
          <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
-           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+           <input type="email" id="fecha" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
 
          <div class="form-group mb-3">
@@ -55,12 +55,12 @@
        
         <div class="mb-3">
           <label class="form-label">Hora</label>
-          <input type="time" class="form-control">
+          <input type="time" class="form-control" id="fecha">
         </div>
         
         <div class="mb-3">
           <label for="select">Número de personas</label>
-         <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+         <select class="form-select form-select-lg mb-3 form-control" aria-label="Large select example" id="fecha">
        <option value="1">1</option>
        <option value="2">2</option>
        <option value="3">3</option>
@@ -69,7 +69,7 @@
          </select>
         </div>
         <div class="mt-4 d-grid gap-2">
-          <button class="text-bg-danger p-3">Reservar ahora</button>
+          <button type="button" class="text-bg-danger p-3" onclick="reservas()">Reservar ahora</button>
         </div>
 
   </div>
@@ -86,5 +86,8 @@
   </div>
 </footer>
  <script src="js/bootstrap.bundle.min.js"></script>
+   
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script src="js/reservas.js"></script>
   </body>
 </html>
