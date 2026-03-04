@@ -13,14 +13,28 @@ function reservas() {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Datos incompletos, complete los campos por favor"
+                text: "Datos incompletos, complete los campos por favor",
+                confirmButtonColor: "#e07b00"
             });
             return;
         } else {
             Swal.fire({
-                title: nombre + " 🎉 Su reserva ha sido exitosa. Gracias por elegirnos",
-                icon: "success",
-                draggable: true
+                title: "¿Desea confirmar su reserva?",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonText: "Confirmar",
+                cancelButtonText: "Cancelar",
+                confirmButtonColor: "#e07b00",
+                cancelButtonColor: "#1a1a2e"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: nombre + " 🎉 Su reserva ha sido exitosa. Gracias por elegirnos",
+                        icon: "success",
+                        draggable: true,
+                        confirmButtonColor: "#e07b00"
+                    });
+                }
             });
             return;
         }
